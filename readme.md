@@ -1,6 +1,6 @@
 
 
-# EasyJS Library - Complete Documentation
+# OneKid Library - Complete Documentation
 
 ## Table of Contents
 1. [Getting Started](#getting-started)
@@ -28,13 +28,13 @@
 ## Getting Started {#getting-started}
 
 ### Installation
-Include EasyJS in your HTML file:
+Include OneKit in your HTML file:
 ```html
-<script src="easyjs.js"></script>
+<script src="onekit.js"></script>
 ```
 
 ### Basic Usage
-EasyJS uses the underscore `_` as its main selector function:
+OneKit uses the underscore `_` as its main selector function:
 ```javascript
 // Select an element by ID
 _('#myElement')

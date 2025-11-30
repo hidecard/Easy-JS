@@ -1,21 +1,21 @@
 /**
- * EasyJS - A lightweight, modern JavaScript library for DOM manipulation,
+ * OneKit - A lightweight, modern JavaScript library for DOM manipulation,
  * animations, reactive state, and API integration.
- * 
+ *
  * Version: 5.0.0
- * Author: EasyJS Team
+ * Author: OneKit Team
  */
 
 (function(global) {
   'use strict';
 
-  // Core EasyJS function - ultra-short selector
+  // Core OneKit function - ultra-short selector
   function _(selector) {
-    return new EasyJS(selector);
+    return new OneKit(selector);
   }
 
-  // EasyJS class with unified compact syntax
-  class EasyJS {
+  // OneKit class with unified compact syntax
+  class OneKit {
     constructor(selector) {
       this.elements = [];
       
@@ -218,7 +218,7 @@
       this.each(function() {
         elements.push(this.cloneNode(true));
       });
-      return new EasyJS(elements);
+      return new OneKit(elements);
     }
 
     // Get parent element
@@ -233,15 +233,15 @@
     down(selector) {
       const elements = [];
       this.each(function() {
-        const children = selector ? 
-          this.querySelectorAll(selector) : 
+        const children = selector ?
+          this.querySelectorAll(selector) :
           this.children;
-        
+
         for (let i = 0; i < children.length; i++) {
           elements.push(children[i]);
         }
       });
-      return new EasyJS(elements);
+      return new OneKit(elements);
     }
 
     // Get sibling elements
@@ -812,12 +812,12 @@
 
   // Plugin architecture
   _.plug = function(name, fn) {
-    EasyJS.prototype[name] = fn;
+    OneKit.prototype[name] = fn;
   };
 
   // Export to global
   global._ = _;
-  global.EasyJS = EasyJS;
+  global.OneKit = OneKit;
 
   // Auto-bind reactive elements
   document.addEventListener('DOMContentLoaded', function() {
